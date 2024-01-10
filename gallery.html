@@ -35,37 +35,48 @@
         }
 
         /* Gallery Styles */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around; /* Center the sections horizontally */
-        }
-
         .gallery-section {
-            width: 100%;
+            display: none;
+            flex-direction: column; /* Display items vertically */
+            align-items: center; /* Center items horizontally */
             margin-bottom: 40px;
-            text-align: center; /* Center the content within each section */
         }
 
         .gallery-item {
-            width: 96%;
+            width: 100%; /* Adjusted width to make room for a bit of space between items */
             margin-bottom: 20px;
-            display: inline-block; /* Center the items horizontally */
+            text-align: center;
         }
 
         .gallery-img {
-            width: 200%; /* Make images fill their container */
-            max-width: 100%; /* Ensure images don't exceed their natural size */
+            width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            margin: 0 auto 0 0; /* Set left margin to 0, right margin to auto */
+            margin-bottom: 10px;
         }
 
-
-
         .gallery-description {
-            margin-top: 10px;
+            margin-top: 5px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination-button {
+            padding: 10px 20px;
+            margin-right: 5px;
+            border: 1px solid #333;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .pagination-button.active {
+            background-color: #333;
+            color: #fff;
         }
     </style>
 </head>
@@ -76,10 +87,16 @@
     </header>
 
     <main>
+			<div class="pagination" id="pagination">
+            <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
+            <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
+        </div>
         <div class="gallery">
 
             <!-- Rings Section -->
-            <div class="gallery-section">
+            <div class="gallery-section" id="gallery-section-1">
                 <h2>Rings</h2>
 
                 <!-- Gallery Items for Rings -->
@@ -252,8 +269,8 @@
             </div>
 
             <!-- Bracelets, Necklaces, Earrings Section -->
-            <div class="gallery-section">
-                <h2>Bracelets, Necklaces, Earrings</h2>
+            <div class="gallery-section" id="gallery-section-2">
+                <h2>Necklaces</h2>
 
                 <!-- Gallery Items for Bracelets, Necklaces, Earrings -->
                 <!-- Add 44 items for Bracelets, Necklaces, Earrings -->
@@ -279,6 +296,65 @@
                    
                 </div>
                     <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="cc.png" alt="Bracelet 29">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="dd.png" alt="Bracelet 30">
+                   
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="ee.png" alt="Bracelet 31">
+                   
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="ff.png" alt="Bracelet 32">
+                   
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="gg.png" alt="Bracelet 33">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="hh.png" alt="Bracelet 34">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="ii.png" alt="Bracelet 35">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="jj.png" alt="Bracelet 36">
+                   
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="kk.png" alt="Bracelet 37">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="ll.png" alt="Bracelet 38">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="mm.png" alt="Bracelet 39">
+                   
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="nn.png" alt="Bracelet 40">
+                    
+                </div>
+                    <div class="gallery-item">
+                    <img class="gallery-img lazy-load" src="pl.png" data-src="oo.png" alt="Bracelet 41">
+                    
+                </div>
+            </div>
+
+            <div class="gallery-section" id="gallery-section-3">
+                <h2>Bracelets</h2>
+
+                <!-- Gallery Items for Bracelets, Necklaces, Earrings -->
+                <!-- Add 44 items for Bracelets, Necklaces, Earrings -->
+                  <div class="gallery-item">
                     <img class="gallery-img lazy-load" src="pl.png" data-src="f.png" alt="Bracelet 6">
                     
                 </div>
@@ -354,14 +430,23 @@
                     <img class="gallery-img lazy-load" src="pl.png" data-src="x.png" alt="Bracelet 24">
                     
                 </div>
-                    <div class="gallery-item">
+			</div>	
+            
+			<div class="gallery-section" id="gallery-section-4">
+                <h2>Earrings</h2>
+
+                <!-- Gallery Items for Bracelets, Necklaces, Earrings -->
+                <!-- Add 44 items for Bracelets, Necklaces, Earrings -->			
+                    
+					
+					<div class="gallery-item">
                     <img class="gallery-img lazy-load" src="pl.png" data-src="y.png" alt="Bracelet 25">
                     
                 </div>
                     <div class="gallery-item">
                     <img class="gallery-img lazy-load" src="pl.png" data-src="z.png" alt="Bracelet 26">
                     
-                </div>
+                </div>	
                     <div class="gallery-item">
                     <img class="gallery-img lazy-load" src="pl.png" data-src="aa.png" alt="Bracelet 27">
                     
@@ -369,62 +454,17 @@
                     <div class="gallery-item">
                     <img class="gallery-img lazy-load" src="pl.png" data-src="bb.png" alt="Bracelet 28">
                     
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="cc.png" alt="Bracelet 29">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="dd.png" alt="Bracelet 30">
-                   
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="ee.png" alt="Bracelet 31">
-                   
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="ff.png" alt="Bracelet 32">
-                   
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="gg.png" alt="Bracelet 33">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="hh.png" alt="Bracelet 34">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="ii.png" alt="Bracelet 35">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="jj.png" alt="Bracelet 36">
-                   
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="kk.png" alt="Bracelet 37">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="ll.png" alt="Bracelet 38">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="mm.png" alt="Bracelet 39">
-                   
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="nn.png" alt="Bracelet 40">
-                    
-                </div>
-                    <div class="gallery-item">
-                    <img class="gallery-img lazy-load" src="pl.png" data-src="oo.png" alt="Bracelet 41">
-                    
-                </div>
-            </div>
-
+                </div>				
+			</div>
+			
+			<div class="pagination" id="pagination">
+            <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
+            <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
         </div>
+
+       
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -452,10 +492,52 @@
             }
         });
     </script>
+    <script>
+        // Function to show a specific section
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.gallery-section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
 
+            var targetSection = document.getElementById(sectionId);
+            targetSection.style.display = 'flex';
+
+            var paginationButtons = document.querySelectorAll('.pagination-button');
+            paginationButtons.forEach(function (button) {
+                button.classList.remove('active');
+            });
+
+            var activeButton = document.querySelector(`.pagination-button[data-target="${sectionId}"]`);
+            activeButton.classList.add('active');
+        }
+
+        // Display the first section initially
+        showSection('gallery-section-1');
+    </script>
+	<script>
+		function scrollToTop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		}
+
+		function showSection(sectionId) {
+			// Hide all sections
+			document.querySelectorAll('.gallery-section').forEach(function(section) {
+				section.style.display = 'none';
+			});
+
+			// Show the selected section
+			document.getElementById(sectionId).style.display = 'block';
+
+			// Scroll to the top
+			scrollToTop();
+		}
+	</script>
 </body>
 </html>
-
 
 
 
