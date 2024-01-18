@@ -3,62 +3,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (your head content) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V & CO - Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+            background-color: #000;
+            color: gold;
+            padding: 20px 0;
             text-align: center;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center; /* Center all content within the main section */
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        main {
+            max-width: 95%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
         }
 
         /* Gallery Styles */
         .gallery-section {
-            display: none;
-            flex-direction: column; /* Display items vertically */
-            align-items: center; /* Center items horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 40px;
         }
 
         .gallery-item {
-            width: 100%; /* Adjusted width to make room for a bit of space between items */
+            width: 100%;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         .gallery-img {
             width: 100%;
-            max-width: 100%;
+            max-width: 650px; /* Match the size of the logo on the index page */
             height: auto;
             border-radius: 5px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             margin-bottom: 10px;
         }
 
-        .gallery-description {
-            margin-top: 5px;
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
         }
 
         .pagination {
@@ -67,16 +70,20 @@
         }
 
         .pagination-button {
-            padding: 10px 20px;
-            margin-right: 5px;
-            border: 1px solid #333;
+            font-size: 18px; /* Larger font size for better readability */
+            padding: 15px 20px; /* Increased padding for a larger appearance */
+            margin: 5px;
+            border: 2px solid gold;
             background-color: #fff;
+            color: #000;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        .pagination-button.active {
-            background-color: #333;
-            color: #fff;
+        .pagination-button.active,
+        .pagination-button:hover {
+            background-color: gold;
+            color: #000;
         }
     </style>
 </head>
@@ -87,11 +94,11 @@
     </header>
 
     <main>
-	<div class="pagination" id="pagination">
-        <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
-        <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
-	<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
-	<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
+			<div class="pagination" id="pagination">
+            <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
+            <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
         </div>
         <div class="gallery">
 
@@ -457,11 +464,11 @@
                 </div>				
 			</div>
 			
-	<div class="pagination" id="pagination">
-        <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
-        <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
-	<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
-	<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
+			<div class="pagination" id="pagination">
+            <button class="pagination-button active" onclick="showSection('gallery-section-1'); scrollToTop();">Rings</button>
+            <button class="pagination-button" onclick="showSection('gallery-section-2'); scrollToTop();">Necklaces</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-3'); scrollToTop();"> Bracelets</button>
+			<button class="pagination-button" onclick="showSection('gallery-section-4'); scrollToTop();"> Earrings</button>
         </div>
 
        
