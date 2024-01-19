@@ -1,38 +1,39 @@
-<!-- catalogs.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Download or See Our Catalogs</title>
+    <title>V & CO Catalogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         h1 {
+            font-family: 'Playfair Display', serif;
             text-align: center;
-            color: #333;
+            color: #000;
             margin-bottom: 30px;
-            font-size: 36px;
+            font-size: 30px;
         }
 
-        div {
-            max-width: 800px;
-            margin: 0 auto;
+        div.catalog {
+            max-width: 95%;
+            margin: 20px auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin-bottom: 20px;
+            text-align: center;
         }
 
         h2 {
-            color: #333;
+            color: #000;
             font-size: 24px;
             margin-bottom: 15px;
             border-bottom: 2px solid #ccc;
@@ -42,22 +43,52 @@
         iframe, object {
             width: 100%;
             height: 500px;
-            border: 1px solid #ccc;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+            border: 2px solid gold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-link:hover {
+            background-color: gold;
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            iframe, object {
+                height: 300px; /* Adjust height for mobile devices */
+            }
+
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>To Download or See Our Catalogs</h1>
+    <h1>V & CO Catalogs</h1>
     
-    <div>
+    <div class="catalog">
         <h2>Rings Collection</h2>
-        <iframe src="rings.pdf"></iframe>
+        <iframe src="rings.pdf" title="Rings Collection"></iframe>
+        <a href="rings.pdf" class="download-link" download>Download Rings Collection</a>
     </div>
 
-    <div>
+    <div class="catalog">
         <h2>Bracelets, Necklaces, Earrings Collection</h2>
-        <iframe src="bracelets-necklaces-earings.pdf"></iframe>
+        <iframe src="bracelets-necklaces-earings.pdf" title="Bracelets, Necklaces, Earrings Collection"></iframe>
+        <a href="bracelets-necklaces-earings.pdf" class="download-link" download>Download Bracelets, Necklaces, Earrings Collection</a>
     </div>
 
 </body>
